@@ -55,18 +55,18 @@ namespace _2___Rappresentare_una_persona_fisica
             Console.Write("Vuoi registrare la persona? (Sì/No): ");
             string risposta = Console.ReadLine();
 
-            Persona persona1 = new Persona(codice, cognome, nome, risposta);
+            Persona persona = new Persona(codice, cognome, nome, risposta);
             Console.Clear();
 
             if (risposta.ToLower() == "sì")
             {
-                persona1.Registra();
-                Console.WriteLine("\nDati della persona dopo la registrazione:");
-                persona1.Mostra();
+                persona.Registra();
+                Console.WriteLine("Dati della persona dopo la registrazione:");
+                persona.Mostra();
             }
             else
             {
-                Console.WriteLine("\nLa persona non è stata registrata.");
+                Console.WriteLine("La persona non è stata registrata.");
             }
             Console.ReadLine();
         }
